@@ -1,0 +1,393 @@
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+.judul {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 18px;
+}
+
+.huruf_navbar {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.bgsidebar {
+	background-color: #003e51;
+}
+
+.bgsidebarp {
+	background-color: #0f72b4;
+}
+
+.scroll {
+	border: 1px solid rgb(255, 255, 255);
+	padding: 5px;
+	margin-top: 5px;
+	width: 1100px;
+	height: 600px;
+	overflow: scroll;
+}
+.auto {
+	display: block;
+	border: 1px solid red;
+	padding: 5px;
+	margin-top: 5px;
+	width: 300px;
+	height: 50px;
+	overflow: auto;
+}
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+
+	/*background = gradient + image pattern combo*/
+	background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+
+* {
+	margin: 2;
+	padding: 2;
+}
+
+html {
+	height: 100% auto;
+}
+
+.formp {
+	color: grey;
+}
+
+#heading {
+	text-transform: uppercase;
+	color: #0f72b4;
+	font-weight: normal;
+}
+
+#msform {
+	text-align: center;
+	position: relative;
+	margin-top: 20px auto;
+}
+
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 0.5rem;
+	box-sizing: border-box;
+	width: 100% auto;
+	margin: 0;
+	padding-bottom: 20px auto;
+	position: relative;
+}
+
+.form-card {
+	text-align: left;
+}
+
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+#msform input,
+select,
+#msform textarea {
+	padding: 8px 15px 8px 15px;
+	border: 1px solid #ccc;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2c3e50;
+	background-color: #ffffff;
+	font-size: 15px;
+	font-family: roboto;
+	font-style: bold;
+	border-radius: 5px;
+	letter-spacing: 1px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border: 1px solid #0f72b4;
+	outline-width: 0;
+}
+
+#msform .action-button {
+	width: 90px;
+	height: 38px;
+	background: #0f72b4;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 0px 5px;
+	margin: 10px 0px 10px 5px;
+	float: center;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+	background-color: #117ca7;
+}
+
+#msform .action-button-previous {
+	width: 90px;
+	height: 38px;
+	background: #616161;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 0px 5px;
+	margin: 10px 5px 10px 0px;
+	float: center;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+	background-color: none;
+}
+
+.card {
+	z-index: 0;
+	border: none;
+	position: relative;
+}
+
+.fs-title {
+	font-size: 25px;
+	color: #0f72b4;
+	margin-bottom: 10px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.purple-text {
+	color: #0f72b4;
+	font-weight: normal;
+}
+
+.steps {
+	font-size: 15px;
+	color: gray;
+	margin-bottom: 10px;
+	font-weight: normal;
+	text-align: right;
+}
+
+.fieldlabels {
+	color: gray;
+	text-align: left;
+}
+
+#progressbar {
+	margin-bottom: 20px;
+	overflow: hidden;
+	color: lightgrey;
+}
+
+#progressbar .active {
+	color: #0f72b4;
+}
+
+#progressbar li {
+	list-style-type: none;
+	font-size: 14px;
+	width: 25%;
+	float: left;
+	position: relative;
+	font-weight: 400;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#progressbar #data_siswa:before {
+	content: "1";
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+#progressbar #data_orangtua:before {
+	content: "2";
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+#progressbar #data_wali:before {
+	content: "3";
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+#progressbar #berkas_pendaftaran:before {
+	content: "4";
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+}
+
+#progressbar li:before {
+	width: 40px;
+	height: 40px;
+	line-height: 37px;
+	display: block;
+	font-size: 20px;
+	color: #ffffff;
+	background: lightgray;
+	border-radius: 50%;
+	margin: 0 auto 11px auto;
+	padding: 2px;
+	font-family: Arial;
+	font-style: bold;
+}
+
+#progressbar li:after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	background: lightgray;
+	position: absolute;
+	left: 0;
+	top: 20px;
+	z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+	background: #0f72b4;
+}
+
+.progress {
+	height: 15px;
+}
+
+.progress-bar {
+	background-color: #0f72b4;
+}
+
+.fit-image {
+	width: 100%;
+	object-fit: cover;
+}
+
+.kirim {
+	width: 90px;
+	height: 38px;
+	background: #059700;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 0px 5px;
+	margin-right: 5px;
+	margin: 10px 0px 10px 0px;
+	float: center;
+}
+
+/* .show {
+	background: rgb(15, 103, 161);
+	opacity: 90%;
+} */
+
+.cek {
+	background-color: #ffffff;
+	border: 5px solid rgb(255, 255, 255);
+	color: rgb(112, 111, 111);
+}
+
+#msform2 input,
+select,
+#msform textarea {
+	padding: 8px 15px 8px 15px;
+	border: 1px solid #ccc;
+	margin-bottom: 8px;
+	margin-top: 2px;
+	width: 100%;
+	box-sizing: border-box;
+	color: #2c3e50;
+	background-color: #f0f0f0;
+	font-size: 15px;
+	font-family: roboto;
+	border-radius: 4px;
+	letter-spacing: 1px;
+}
+/* background dropdown */
+
+.aksi_pendaftar {
+	float: center;
+}
